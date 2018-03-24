@@ -1,0 +1,41 @@
+{
+  "name": "drop-zone",
+  "version": "0.0.1",
+  "description": "Drag and Drop webpage creator",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drop-Target/DropZone.git"
+  },
+  "keywords": [
+    "website",
+    "builder",
+    "drag",
+    "and",
+    "drop",
+    "editor"
+  ],
+  "author": "bjalparekh@gmail.com, kou4307@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Drop-Target/DropZone/issues"
+  },
+  "homepage": "https://github.com/Drop-Target/DropZone#readme"
+}
