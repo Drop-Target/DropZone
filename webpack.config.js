@@ -13,16 +13,14 @@ const outputPath = `${__dirname}/dist`;
 module.exports = () => {
   return {
     target: 'electron-main',
-    entry: {
-      app: ['babel-polyfill', './src/ts/index.ts'],
-    },
+    entry: './src/ts/index.tsx',
     output: {
-      filename: '[name].js',
+      filename: 'bundle.js',
       path: outputPath,
       publicPath: '/',
     },
     resolve: {
-      extensions: ['.jsx', '.js', '.json'],
+      extensions: ['.jsx', '.js', '.json',".ts", ".tsx"],
     },
     node: {
       __dirname: false,
@@ -30,6 +28,7 @@ module.exports = () => {
     },
     module: {
       rules: [
+        { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
@@ -61,9 +60,10 @@ module.exports = () => {
         },
       ],
     },
+    optimization: {
+      minimize: true,
+    },
     plugins: [
-      extractTextPlugin,
-      new webpack.optimize.UglifyJsPlugin(),
       new CopyWebpackPlugin([
         { from: 'index.html', to: `${outputPath}/index.html` },
         // { from: './src/assets/images', to: `${outputPath}/assets/images` },
